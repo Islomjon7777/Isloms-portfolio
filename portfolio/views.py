@@ -1,7 +1,10 @@
 from django.shortcuts import render
-
+from .models import PostModel
 def index(request):
-    # ctx = {
-    #     'title': 'mening sahifam',  
-    # }
-    return render(request, 'index.html')
+    posts = PostModel.objects.all()
+
+    ctx = {
+        'posts': posts
+    }
+    return render(request, 'index.html', ctx)
+
