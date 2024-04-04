@@ -1,9 +1,9 @@
 from pathlib import Path
 import environ
 import dj_database_url
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 env = environ.Env()
 environ.Env.read_env()
@@ -12,6 +12,7 @@ environ.Env.read_env()
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -106,10 +107,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'staticfiles'
 ]
 
-STATIC_ROOT = "staticfiles"
+STATIC_ROOT = "static"
 
 MEDIA_URL = '/images/' 
 

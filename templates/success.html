@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+</head>
+<body>
+    <div class="container-success">
+        <h1 class="heading-success">Success</h1>
+        <p class="message-success">Your message has been successfully sent.</p>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = '/'; 
+        }, 5000);  
+    </script>
+</body>
+</html>

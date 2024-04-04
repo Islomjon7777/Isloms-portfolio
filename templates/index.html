@@ -152,7 +152,6 @@
                      <br>
                <span class="about-second-line"> With 2 years of experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step while working.</span>
                <div class="cv">
-                <a href="#"><button>Download <span class="colors">CV</span></button></a>
             </div>
             </div>
             <!--about picture-->
@@ -216,7 +215,7 @@
                                </div>
                                <div class="service-description">
                                 <h2>Social Media</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quibusdam possimus</p>
+                                <p>after finishing your project, I will advertise your product on social networks</p>
                                </div>
                            </div>
                            <div class="service-three service wow">
@@ -496,15 +495,15 @@
                  <div class="form-header">
                      Message Me
                  </div>
-                 <form id="myForm" action="#">
-                    <div class="input-line">
-                        <input  id="name" type="text" placeholder="Name" class="input-name">
-                        <input id="email" type="email" placeholder="Email"  class="input-name">
-                    </div>
-                    <input type="text" id="subject" placeholder="subject" class="input-subject">
-                    <textarea id ="body" class="input-textarea" placeholder="message"></textarea>
-                    <button type="button" id ="submit" value="send">Submit</button>
-                 </form>
+                 <form method="post" action="{% url 'success' %}">
+                    {% csrf_token %}
+                    <input class="input-name" type="text" name="name" placeholder="Your Name" required><br>
+                    <input class="input-name" type="email" name="email" placeholder="Your Email" required><br>
+                    <textarea class="input-textarea" name="message" rows="4" cols="50" placeholder="Your Message" required></textarea><br><br>
+                    <button type="submit" value="send">Send</button>
+                </form>
+            
+                 
                
              </div>
             <!--Contact form-->
