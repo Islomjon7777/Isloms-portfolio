@@ -7,6 +7,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = environ.Env()
 environ.Env.read_env()
+
+
+# ENVIRON bu file bir birga bog'alash uchun ishlatamiz
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
@@ -69,7 +74,6 @@ DATABASES = {
     "default": dj_database_url.parse(env('DATABASE_URL'))
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -107,10 +111,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'staticfiles'
+    BASE_DIR / 'static'
 ]
 
-STATIC_ROOT = "static"
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = '/images/' 
 
