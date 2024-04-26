@@ -1,0 +1,76 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<!--mouse  follower-->
+<div class="cursor"></div>
+<!--mouse  follower-->
+
+<div id="contact">
+    <div class="contact-header">Contact <span class="color"> Me</span>
+        <div class="contact-header-caption"> <span class="color"> Get</span> In Touch.</div>
+    </div>
+    <div class="contact-content">
+         <div class="contact-content">
+            <!--Contact form-->
+             <div class="contact-form">
+                 <div class="form-header">
+                     Message Me
+                 </div>
+                 <form method="post" action="{% url 'success' %}">
+                    {% csrf_token %}
+                    <input class="input-name" type="text" name="name" placeholder="Your Name" required><br>
+                    <input class="input-name" type="email" name="email" placeholder="Your Email" required><br>
+                    <textarea class="input-textarea" name="message" rows="4" cols="50" placeholder="Your Message" required></textarea><br><br>
+                    <button type="submit" value="send">Send</button>
+                </form>
+               
+             </div>
+            <!--Contact form-->
+            <!--Contact information-->
+             <div class="contact-info">
+                <div class="contact-info-header">
+                    Contact Info
+                </div>
+                <div class="contact-info-content">
+                <div class="contect-info-content-line">
+                    <img src="../static/images/icon-name.png" class="icon" alt="name-icon">
+                    <div class="contact-info-icon-text">
+                        <h6>Name</h6>
+                        <p>Islomjon Sheraliyev</p>
+                  </div>
+                </div>
+                <div class="contect-info-content-line">
+                  <img src="../static/images/icon-location.png" class="icon" alt="location-icon">
+                  <div class="contact-info-icon-text">
+                      <h6>Location</h6>
+                      <p>Tashkent, UZB</p>
+                </div>
+              </div>
+              <div class="contect-info-content-line">
+                  <img src="../static/images/icon-phone.png" class="icon" alt="phone-icon">
+                  <div class="contact-info-icon-text">
+                      <h6>Call</h6>
+                      <p>+998331571541</p>
+                </div>
+              </div>
+              
+              <div class="contect-info-content-line">
+                  <img src="../static/images/icon-email.png" class="icon" alt="email-icon">
+                  <div class="contact-info-icon-text">
+                      <h6>Email</h6>
+                      <p>i.sheraliyev777@gmail.com</p>
+                </div>
+              </div>
+                </div>
+            <!--Contact information end-->
+           </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">
+            <img src="{% static '../static/images/copyright.png' %}" alt="copyright-img" class="images" height="14px"> Islom Coder
+        </div>
+    </div>
+</div>
+
+{% endblock %}

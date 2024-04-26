@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<!--mouse  follower-->
+<div class="cursor"></div>
+<!--mouse  follower-->
+
+
+<div id="blog">
+    <div class="blog-header"> Blogs</span>
+        <span class ="header-caption"> My Latest <span class="color"> blog posts.</span></span></div>
+    <div class="blog-content">
+        {% for post in posts %}
+            <div class="blogs">
+                <a href="#">
+                    <div class="img">
+                        <img src="{{ post.post_image.url }}" alt="">
+                    </div>
+                    <div class="blog-text">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.content }}</p>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="footer">
+     <div class="footer-text">
+         <img src="{% static '../static/images/copyright.png' %}" alt="copyright-img" class="images" height="14px"> Islom Coder
+     </div>
+    </div>
+</div>
+{% endblock %}

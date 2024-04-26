@@ -28,10 +28,6 @@
     margin: 0;
   }
   
-  /* Firefox */
-  /* input[type=number] {
-    -moz-appearance: textfield;
-  } */
     html{
       background: #101010;
       
@@ -410,7 +406,7 @@
   }
   #about{
       background-color: #101010;
-      display: none;
+      display: fixed;
       width: 100%;
       height: auto;
       overflow: hidden;
@@ -755,6 +751,27 @@
       transition: all .4s ease;
       background: #c70039;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* PORTFOLIO */
+  
   .portfolio-header{
       height: auto;
       width: 100%;
@@ -790,8 +807,8 @@
       justify-content: center;
       padding: 1.5%;
       padding-right: 2%;
-  padding-top: 50px;
-  padding-bottom: 40px;
+      padding-top: 50px;
+      padding-bottom: 40px;
   }
   
   .portfolio-text{
@@ -821,6 +838,7 @@
       font-family: poppins;
       font-weight: 200;
       padding: 20px;
+      color: whitesmoke;
   }
   .portfolio-text button{
       font-size: 16px;
@@ -896,26 +914,11 @@
       overflow: hidden;
   }
   #portfolio{
-      display: none;
-      height: auto;
-      overflow-x: hidden;
-      background-color: #101010;
-      width: 100%;
-      color:whitesmoke;
-  }
-  .blog-header{
-      height: auto;
-      width: 100%;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      font-size: 45px;
-      font-family: raleway;
-      color: whitesmoke;
-      padding:10px;
-      padding-bottom: 30px;
-      padding-top: 60px;
-      font-weight: 900;
+    background-color: #101010;
+    display: fixed;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
   }
   .cursor{
       height: 50px;
@@ -948,19 +951,61 @@
       transition:  scale .4s ease;
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* BLOG */
   #blog{
-      background: #101010;
-      display: none;
-      color:whitesmoke;
+      background-color: #101010;
+      display: fixed;
       width: 100%;
       height: auto;
+      overflow: hidden;
   }
   .blog-content{
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      height: auto;
   }
+  .blog-header{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-family: raleway;
+    color: whitesmoke;
+    padding:10px;
+    padding-bottom: 30px;
+    padding-top: 60px;
+    font-weight: 900;
+}
   .blogs{
       height: 420px;
       width: 40%;
@@ -1031,13 +1076,40 @@
       text-decoration: none;
       color: whitesmoke;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* CONTACT */
   #contact{
-      display: none;
-      height: auto;
-      text-align: center;
-      width: 100%;
-      background: #101010;
-      position: relative; 
+    background-color: #101010;
+    display: fixed;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
   }
   .contact-header{
       height: auto;
@@ -1224,7 +1296,6 @@
       justify-content: center;
   }
   .footer .footer-text{
-      position: relative;
       display: inline;
       font-size: 18px;
       font-weight: 400;
@@ -1528,8 +1599,8 @@
           justify-content: center;
           padding: 1.5%;
           padding-right: 2%;
-      padding-top: 50px;
-      padding-bottom: 40px;
+          padding-top: 50px;
+          padding-bottom: 40px;
       }
       .portfolio-text{
           width: 90%;

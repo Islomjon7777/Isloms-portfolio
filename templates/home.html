@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<div id="header">
+    <div id="particles"></div>
+      <!--Social Media Links-->
+    <div class="social-media-links">
+        <a href="https://www.instagram.com/is_lom087/" target="_blank"><img src="{% static '../static/images/instagram logo.png' %}" class="social-media" alt="instagram-logo"></a>
+        <!-- <i class="fa-brands fa-instagram fa-lg" style="color: #ffffff;"></i> -->
+        <br>
+        <!-- <a href="#"><img src="images/facebook logo.png" class="social-media" alt="facebook-logo"></a> -->
+        <a href="https://github.com/Islomjon7777?tab=repositories" target="_blank"><i class="fa-brands fa-github fa-lg social-media" style="color: #ffffff;"></i></a>
+        <br>
+        <a href="https://www.linkedin.com/in/islomjon-sheraliyev-6b64b7301/" target="_blank"><img src="{% static '../static/images/linkedin logo.png' %}" class="social-media" alt="instagram-logo"></a>
+        <!-- <i class="fa-brands fa-linkedin fa-lg" style="color: #ffffff;"></i> -->
+        <br>
+        <!-- <a href="#"><img src="images/x" class="social-media" alt="twitter-logo"></a> -->
+        <a href="https://twitter.com/IslomCoder" target="_blank"><i class="fa-brands fa-x-twitter fa-lg social-media" style="color: #ffffff;"></i></a>
+
+    </div>
+
+    <!--Social Media Links end-->
+    <div class="header-content">
+        <div class="header-content-box">
+        <div class="firstline"><span class="color">Islom </span>Coder</div>
+        <div class="secondline">
+        I'm a
+        <span class="txt-rotate color" data-period="1200"data-rotate='[ " FullStackDeveloper.", " Freelancer.", " Bloger." ]'></span>
+        <span class="slash">|</span>
+    </div>
+    <div class="contact">
+        <a href="Mailto:i.sheraliyev777@gmail.com" target="_blank"><img src="{% static '../static/images/mail.png' %}" alt="email-pic" class="contactpic"></a><!--Your email Id write in place of "#"-->
+        <a href="Tel:#"><img src="{% static '../static/images/call.png' %}" alt="phone-pic" class="contactpic"></a><!--Your telephone number Id write in place of "#"-->
+    </div>    
+</div>
+
+{% endblock %}

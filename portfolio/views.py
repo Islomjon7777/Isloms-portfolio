@@ -1,40 +1,49 @@
 from django.shortcuts import render, redirect
-from .models import PostModel
+from .models import PostModel, PortfolioModel
 from .forms import ContactForm
+from django.http import HttpResponseBadRequest
 from telegram import Bot
+from datetime import datetime
+import requests
 
 def index(request):
+    return render(request, 'index.html',)
+
+def HomeView(request):
+    
+    return render(request, 'home.html') 
+    
+def AboutView(request):
+
+    return render(request, 'about.html')
+
+
+def BlogView(request):
     posts = PostModel.objects.all()
 
-    # telegram bot messege bot
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            message = form.cleaned_data['message']
-            
-            bot_token = '7193997385:AAEatYw-MY2ubw8reQX-gBfw6TecfP6hjk4'
-            bot = Bot(token=bot_token)
-            bot.send_message(text=f'Name: {name}\nEmail: {email}\n\n{message}')
-            print(name)
-            print(email)
-            print(message)
-            return redirect('success/')
-        else:
-            return redirect('/')
-    else:
-        form = ContactForm()
-
-    
     ctx = {
         'posts': posts,
-        'form': form
     }
-    return render(request, 'index.html', ctx)
+
+    return render(request, 'blog.html', ctx)
+
+
+def PortfolioView(request):
+    portfolio = PortfolioModel.objects.all()
+
+    ctx = {
+        'portfolio': portfolio
+    }
+
+    return render(request, 'portfolio.html', ctx)
+
+
+def ContactView(request):
+
+        return render(request, 'contact.html', )
+    
 
 
 
 def success_view(request):
-
     return render(request, 'success.html')

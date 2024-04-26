@@ -1,0 +1,151 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+    <!--mouse  follower-->
+    <div class="cursor"></div>
+    <!--mouse  follower-->
+    
+    <div id="about">
+        <!--about content-->
+        <div id="about-content">
+            <div class="about-header">
+                About <span class="color">Me</span>
+                <span class ="header-caption">Get to Know <span class="color"> me.</span></span>
+            </div>
+            <div class="about-main">
+        <div class="about-first-paragraph wow">
+        <!--about description-->
+           <span class="about-first-line">
+                I'm creative 
+                <span class="color">web developer</span>
+                 based in Tashkent, UZB </span>
+                 <br>
+           <span class="about-second-line"> With 2 years of experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step while working.</span>
+           <div class="cv">
+            
+            <a href="{% static '../staticfiles/Islomjons Resume.pdf' %}" download="Isloms-cv"><button>Download <span class="colors">CV</span></button></a>
+           </div>
+        </div>
+        <!--about picture-->
+        <div class="about-img">
+            <img class="aboutpageimg" src="{% static '../static/images/myimg.png' %}" alt="Your Image">
+        </div>
+        </div>
+
+        </div>
+        <!--services start-->
+        <div id="services">
+        <!--services header-->
+                <div class="services-heading wow">
+                    <span class="color">My</span> Services
+                </div>
+        <!--services header end-->
+        <!--services content-->
+                <div class="services-content">
+                       <div class="service-one service wow">
+                           <div class="service-img">
+                           <img src="{% static '../static/images/coding.png' %}" alt="service-one">
+                           </div>
+                           <div class="service-description">
+                            <h2>Web Designing</h2>
+                            <p>I can help you with creating your web-projects</p>
+                           </div>
+                       </div>
+                       <div class="service-two service wow">
+                           <div class="service-img">
+                           <img src="{% static '../static/images/instagram.png' %}" alt="service-two">
+                           </div>
+                           <div class="service-description">
+                            <h2>Social Media</h2>
+                            <p>after finishing your project, I will advertise your product on social networks</p>
+                           </div>
+                       </div>
+                       <div class="service-three service wow">
+                        <div class="service-img">
+                           <img src="{% static '../static/images/bulb.png' %}" alt="service-three">
+                        </div>
+                        <div class="service-description">
+                            <h2>Creative Design</h2>
+                            <p>I'll use only high quelity design for your projects</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!--services content end-->
+        <!--services end-->
+        <div id="skills">
+            <div class="skills-header">
+                 My <span class="color"> Skills</span>
+            </div>
+            <div class="skills-content " style="text-align: center;">
+                <div class="skill-html skill">
+                    <div class="skill-text">
+                        <div class="html">
+                            HTML/CSS
+                        </div>
+                    </div>
+                <div class="html-prog wow prog">
+                    <div class="html-progress wow">100%</div>
+                </div>
+                </div>
+                <div class="skill-html skill">
+                    <div class="skill-text">
+                <div class="html">
+                  Javascript
+                </div>
+                    </div>
+                <div class="html-prog wow prog">
+                    <div class="js-progress wow">95%</div>
+                </div>
+                </div>
+                <div class="skill-html skill">
+                    <div class="skill-text">
+                <div class="html">
+                    ReactJS
+                </div>
+                    </div>
+                <div class="html-prog wow prog">
+             <div class="ReactJS-progress wow">89%</div>
+                </div>
+                </div>
+                <div class="skill-html skill">
+                    <div class="skill-text">
+                <div class="html">
+                    Python
+                </div>
+                    </div>
+                <div class="html-prog wow prog">
+             <div class="python-progress wow">95%</div>
+                </div>
+                </div>
+                <div class="skill-html skill">
+                    <div class="skill-text">
+                        <div class="html">
+                            Django
+                        </div>
+                    </div>
+                    <div class="html-prog wow prog">
+                    <div class="django-progress wow">90%</div>
+                </div>
+                </div>
+                <div class="skill-html skill">
+                    <div class="skill-text">
+                <div class="html">
+                    SQLite
+                </div>
+                    </div>
+                <div class="html-prog wow prog">
+                    <div class="sqlite-progress wow">90%</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+         <div class="footer-text">
+             <img src="{% static '../static/images/copyright.png' %}" alt="copyright-img" class="images" height="14px"> Islom Coder
+         </div>
+        </div>
+    </div>
+
+{% endblock %}
