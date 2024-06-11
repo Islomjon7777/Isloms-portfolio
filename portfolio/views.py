@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import PostModel, PortfolioModel
 from .forms import ContactForm
-from django.http import HttpResponseBadRequest
+from django.http import HttpResponse
 from telegram import Bot
 from datetime import datetime
 import requests
@@ -39,8 +39,9 @@ def PortfolioView(request):
 
 
 def ContactView(request):
-
-        return render(request, 'contact.html', )
+    
+    
+    return render(request, 'contact.html',)
     
 
 

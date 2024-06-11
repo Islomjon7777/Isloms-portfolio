@@ -16,14 +16,49 @@
                  <div class="form-header">
                      Message Me
                  </div>
-                 <form method="post" action="{% url 'success' %}">
+                 <form id="form" method="post" action="{% url 'success' %}">
                     {% csrf_token %}
-                    <input class="input-name" type="text" name="name" placeholder="Your Name" required><br>
-                    <input class="input-name" type="email" name="email" placeholder="Your Email" required><br>
-                    <textarea class="input-textarea" name="message" rows="4" cols="50" placeholder="Your Message" required></textarea><br><br>
-                    <button type="submit" value="send">Send</button>
+                    <input id="name" class="input-name" type="text" name="name" placeholder="Your Name" required><br>
+                    <input id="email" class="input-name" type="email" name="email" placeholder="Your Email" required><br>
+                    <input id="tg_username" class="input-name" type="text" name="tg_username" placeholder="Your Telegram Username" required><br>
+                    <textarea id="message" class="input-textarea" name="message" rows="4" cols="50" placeholder="Your Message" required></textarea><br><br>
+                    <button type="submit" value="send">Send</ш>
                 </form>
-               
+                <script>
+                    function sendData(e) {
+                        e.preventDefault();
+                        let name = document.getElementById('name').value;
+                        let email = document.getElementById('email').value;
+                        let tg_username = document.getElementById('tg_username').value;
+                        let message = document.getElementById('message').value;
+
+                        let apiToken = "7193997385:AAEatYw-MY2ubw8reQX-gBfw6TecfP6hjk4"; 
+                        let chat_id = 5711937704; 
+                        let text = `Name: ${name}\nEmail: ${email}\nTelegram Username: ${tg_username}\nMessage: ${message}`;
+            
+                        fetch(`https://api.telegram.org/bot${apiToken}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(text)}`)
+                            .then(res => res.json())
+                            .then(data => {
+                                console.log(data);
+                                if (data.ok) {
+                                    redirect();
+                                    console.log('Sent message');
+                                } else {
+                                    console.log('Error:', data);
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                            });
+                    }
+                    
+                    let form = document.querySelector('#form')
+                    form.addEventListener('submit', sendData)
+
+                    function redirect() {
+                        window.location.href = "{% url 'success' %}";
+                    }
+                </script>
              </div>
             <!--Contact form-->
             <!--Contact information-->
